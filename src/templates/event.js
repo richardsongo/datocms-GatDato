@@ -8,14 +8,14 @@ import Layout from "../components/layout"
 export default ({ data }) => (
   <Layout>
     <article className="sheet">
-      <HelmetDatoCms seo={data.datoCmsWork.seoMetaTags} />
+      <HelmetDatoCms seo={data.datoCmsEvent.seoMetaTags} />
       <div className="sheet__inner">
         <h1 className="sheet__title">{data.datoCmsEvent.title}</h1>
         <p className="sheet__lead">{data.datoCmsEvent.excerpt}</p>
         <div className="sheet__slider">
           <Slider infinite={true} slidesToShow={2} arrows>
             {data.datoCmsEvent.gallery.map(({ fluid }) => (
-              <img alt={data.datoCmsWork.title} key={fluid.src} src={fluid.src} />
+              <img alt={data.datoCmsEvent.title} key={fluid.src} src={fluid.src} />
             ))}
           </Slider>
         </div>
