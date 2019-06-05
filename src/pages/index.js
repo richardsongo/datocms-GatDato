@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 const IndexPage = ({ data }) => (
   <Layout>
     <Masonry className="showcase">
-      {data.allDatoCmsWork.edges.map(({ node: work }) => (
+      {data.allDatoCmsWork.edges.map(({ node: works }) => (
         <div key={work.id} className="showcase__item">
           <figure className="card">
             <Link to={`/works/${work.slug}`} className="card__image">
