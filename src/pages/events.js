@@ -4,10 +4,10 @@ import Masonry from 'react-masonry-component'
 import Img from 'gatsby-image'
 import Layout from "../components/layout"
 
-const Events = ({ data }) => (
+const Event = ({ data }) => (
   <Layout>
     <Masonry className="showcase">
-      {data.allDatoCmsEvent.edges.map(({ node: events }) => (
+      {data.allDatoCmsEvent.edges.map(({ node: event }) => (
         <div key={event.id} className="showcase__item">
           <figure className="card">
             <Link to={`/events/${event.slug}`} className="card__image">
@@ -28,7 +28,7 @@ const Events = ({ data }) => (
   </Layout>
 )
 
-export default Events
+export default Event
 
 export const query = graphql`
   query EventQuery {
