@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 const EventsPage = ({ data }) => (
   <Layout>
     <Masonry className="showcase">
-      {data.allDatoCmsWork.edges.map(({ node: events }) => (
+      {data.allDatoCmsEvent.edges.map(({ node: event }) => (
         <div key={event.id} className="showcase__item">
           <figure className="card">
             <Link to={`/events/${event.slug}`} className="card__image">
@@ -31,7 +31,7 @@ const EventsPage = ({ data }) => (
 export default EventsPage
 
 export const query = graphql`
-  query IndexQuery {
+  query EventsQuery {
     allDatoCmsEvent(sort: { fields: [position], order: ASC }) {
       edges {
         node {
