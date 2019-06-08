@@ -31,7 +31,7 @@ const EventsPage = ({ data }) => (
 export default EventsPage
 
 export const query = graphql`
-  query EventsQuery {
+  query EventQuery {
     allDatoCmsEvent(sort: { fields: [position], order: ASC }) {
       edges {
         node {
