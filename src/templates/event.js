@@ -22,7 +22,7 @@ export default ({ data }) => (
         <div
           className="sheet__body"
           dangerouslySetInnerHTML={{
-            __html: data.datoCmsWork.descriptionNode.childMarkdownRemark.html,
+            __html: data.datoCmsEvent.descriptionNode.childMarkdownRemark.html,
           }}
         />
         <div className="sheet__gallery">
@@ -34,7 +34,7 @@ export default ({ data }) => (
 )
 
 export const query = graphql`
-  query WorkQuery($slug: String!) {
+  query EventQuery($slug: String!) {
     datoCmsEvent(slug: { eq: $slug }) {
       seoMetaTags {
         ...GatsbyDatoCmsSeoMetaTags
