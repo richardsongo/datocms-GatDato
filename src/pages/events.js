@@ -4,7 +4,7 @@ import Masonry from 'react-masonry-component'
 import Img from 'gatsby-image'
 import Layout from "../components/layout"
 
-const IndexPage = ({ data }) => (
+const EventsPage = ({ data }) => (
   <Layout>
     <Masonry className="showcase">
       {data.allDatoCmsWork.edges.map(({ node: events }) => (
