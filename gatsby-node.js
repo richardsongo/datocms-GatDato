@@ -13,7 +13,8 @@ exports.createPages = ({ graphql, actions }) => {
               slug
             }
           }
-        },
+        }
+
  allDatoCmsEvent {
           edges {
             node {
@@ -24,6 +25,7 @@ exports.createPages = ({ graphql, actions }) => {
 
       }
     `).then(result => {
+      
       result.data.allDatoCmsWork.edges.map(({ node: work }) => {
         createPage({
           path: `works/${work.slug}`,
@@ -31,7 +33,7 @@ exports.createPages = ({ graphql, actions }) => {
           context: {
             slug: work.slug,
           },
-        }),
+        })
              result.data.allDatoCmsEvent.edges.map(({ node: event }) => {
         createPage({
           path: `events/${event.slug}`,
