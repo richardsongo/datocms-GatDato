@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 const EventsPage = ({ data }) => (
   <Layout>
     <Masonry className="showcase">
-      {data.allDatoCmsEvent.edges.map(({ node: event }) => (
+      {data.allDatoCmsEvent.edges.map(({ node: events }) => (
         <div key={event.id} className="showcase__item">
           <figure className="card">
             <Link to={`/events/${event.slug}`} className="card__image">
