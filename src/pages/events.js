@@ -28,7 +28,7 @@ const IndexPage = ({ data }) => (
   </Layout>
 )
 
-export default Events
+export default EventsPage
 
 export const query = graphql`
   query IndexQuery {
