@@ -1,15 +1,15 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Layout from '../components/layout'
+import React from "react"
+import { graphql } from 'gatsby'
+import { HelmetDatoCms } from 'gatsby-source-datocms'
+import Layout from "../components/layout"
 
-import pic11 from '../assets/images/pic11.jpg'
+const SuccessPage = () => (
 
-const Success = props => (
-  <Layout>
-    <Helmet>
-      <title>Success Page</title>
-      <meta name="description" content="Success Page" />
-    </Helmet>
+   <Layout>
+    <article className="sheet">
+      <div className="sheet__inner">
+        <h1 className="sheet__title">Contact</h1>
+  
 
     <div id="main" className="alt">
       <section id="one">
@@ -18,13 +18,15 @@ const Success = props => (
             <h1>Success/Thank You Page</h1>
           </header>
           <span className="image main">
-            <img src={pic11} alt="" />
+            Success
           </span>
           <p>Thank you for contacting us!</p>
         </div>
       </section>
     </div>
+  </div>
+</article>
   </Layout>
 )
 
-export default Success
+export default SuccessPage
