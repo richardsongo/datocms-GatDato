@@ -1,7 +1,14 @@
 import React from "react"
+import { graphql } from 'gatsby'
+import { HelmetDatoCms } from 'gatsby-source-datocms'
+import Layout from "../components/layout"
 
 const ContactPage = () => (
 
+   <Layout>
+    <article className="sheet">
+      <div className="sheet__inner">
+        <h1 className="sheet__title">Contact</h1>
   
   
   <form
@@ -33,7 +40,9 @@ const ContactPage = () => (
     </li>
   </ul>
 </form>
- 
+       </div>
+    </article>
+  </Layout>
   
 )
 export default ContactPage
