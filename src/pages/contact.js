@@ -2,13 +2,8 @@ import React from "react"
 
 const ContactPage = () => (
 
-  <div>
-    <h1>I'd love to talk! Email me at the address below</h1>
-    <p>
-      <a href="mailto:me@example.com">me@example.com</a>
-    </p>
-  </div>
-   <div>
+  
+  
   <form
   name="contact"
   method="post"
@@ -38,7 +33,7 @@ const ContactPage = () => (
     </li>
   </ul>
 </form>
- </div>
+ 
   
 )
 export default ContactPage
