@@ -35,6 +35,7 @@ allDatoCmsEvent {
             slug: work.slug,
           },
         })
+        })
 
               result.data.allDatoCmsEvent.edges.map(({ node: event }) => {
         createPage({
@@ -44,10 +45,8 @@ allDatoCmsEvent {
             slug: event.slug,
           },
         })
-
-        
-        
       })
+
       resolve()
     })
   })
